@@ -1,0 +1,182 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Hero section styles */
+.hero {
+    background-image: linear-gradient(rgba(50, 47, 47, 0.009),rgba(18, 18, 18, 0.653), rgba(0, 0, 0, 0.833)), url('./images/main-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 210px 0;
+}
+
+.hero-content {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+.hero h1 {
+    font-size: 7vw;
+}
+
+.hero h2 {
+    font-size: 6vw;
+}
+.hero span{
+    font-size: 4vw;
+}
+
+/* Black box section styles */
+.black-box {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 28px 0;
+}
+
+.black-box h3 {
+    font-size: 72px;
+    font-weight: 400;
+}
+
+.black-box span {
+    font-size: 9vw;
+    color: white;
+}
+
+/* Card container section styles */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 20px;
+    background-color: rgba(245, 238, 229, 0.939);
+    position: relative;
+    height: 110vh;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 320px;
+    height: 400px;
+    background-color: #fbf5ef;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.394);
+    padding: 20px;
+    background-size: cover;
+    position: absolute;
+}
+
+.card img {
+    width: 25vw;
+    height: 50vh;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    margin-top: 20px;
+}
+.card1 {
+    top: 5%;
+}
+.card2 {
+    top: 15%;
+}
+.card3{
+    top: 25%;
+}
+
+/* Bottom section styles */
+.bottom {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f7f1ec;
+    padding: 40px 0;
+}
+
+.contact-me, .about-me {
+    border: 1px solid rgb(171, 165, 166);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.272);
+    padding: 12px;
+    border-radius: 6px;
+    width: 45%;
+    background-color: rgba(243, 231, 233, 0.823);
+}
+
+.contact-me h2, .about-me h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 1100px) {
+    .hero {
+        min-height: 22vh;
+        padding: 20px 0;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+    }
+    .hero-content{
+        margin-top: 45px;
+    }
+    .hero h1 {
+        font-size: 10vw;
+    }
+    
+    .hero h2 {
+        font-size: 8vw;
+    }
+    .hero span{
+        font-size: 4vw;
+    }
+
+    .black-box h3 {
+        font-size: 6vw;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+        position: unset;
+        height: fit-content;
+        gap: 10px;
+        padding-top: 20px;
+    }
+    .card{
+        position: unset;
+        background-size: cover;
+        width: 80%;
+    }
+    .card img{
+        width: 95%;
+        height: 65%;
+    }
+
+    .grid-item {
+        margin-bottom: 20px;
+    }
+
+    .bottom {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .contact-me, .about-me {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
