@@ -76,6 +76,10 @@ body {
     gap: 4%;
     background-color: rgba(245, 238, 229, 0.939);
     padding: 8% 12% 2% 12%;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    gap: 4%;
+    background-color: rgba(245, 238, 229, 0.939);
+    padding: 5%;
     height: auto;
 }
 
@@ -84,6 +88,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 4%;
+    margin-bottom: 8%;
 }
 
 .card {
@@ -108,6 +113,24 @@ body {
     margin: 7% 0;
 }
 
+.line{
+    position: absolute;
+    background-color: black;
+    height: 4px;
+    width: 20%;
+    animation: moveLine 5s infinite;
+    animation-timing-function: linear;
+}
+@keyframes moveLine {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 100%;
+        width: 0%;
+    }
+}
+
 
 /* Bottom section styles */
 .bottom {
@@ -121,6 +144,8 @@ body {
     border: 1px solid rgb(171, 165, 166);
     box-shadow: 0.3vw 0.3vw 0.5vw rgba(0, 0, 0, 0.272);
     background-color: rgb(242, 236, 230);
+    box-shadow: 1vw 1vw 2vw rgba(0, 0, 0, 0.272);
+    background-color: rgb(242, 230, 236);
     padding: 2%;
     width: 90%;
     height: 10rem;
@@ -136,6 +161,16 @@ body {
 
 /* Media query for responsiveness */
 @media screen and (max-width: 900px) {
+    margin: 4%;
+}
+
+.contact-me h2, .about-me h2 {
+    font-size: 4vw;
+    margin-bottom: 3%;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 1080px) {
     .hero {
         min-height: 20vh;
         padding-top: 25%;
@@ -156,6 +191,9 @@ body {
         grid-template-columns: 1fr;
         gap: 4%;
         padding: 12% 6%;
+        gap: 3%;
+        padding-top: 10%;
+        padding-bottom: 10%;
         height: auto;
     }
     .card {
@@ -189,10 +227,22 @@ body {
 
 }
 @media screen and (min-width: 901px) and (max-width: 1220px) {
+    .line{
+        margin-top: 8%;
+    }
+}
+@media screen and (min-width: 1081px) and (max-width: 1220px) {
     .card-container {
         grid-template-columns: 1fr 1fr;
         padding-top: 5%;
         padding-bottom: 2%;
+    }
+    .bottom{
+        padding: 8% 4%;
+    }
+
+    .line{
+        margin-top: 8%;
     }
     .bottom{
         padding:4%;
